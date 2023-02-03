@@ -1,20 +1,25 @@
 import "./App.css";
+import React from 'react'
+import Header from "./components/Header";
+// import Products from "./components/Products"; 
+import recipeData from "./components/recipeData.js"
+import Search from "./components/Search.jsx"
+
+// holder div last class -  tc ma0 pa4 min-vh-100
+
 
 function App() {
   return (
-    <div className="App">
-      <section class="hero">
-        <div class="hero-body">
-          <p class="title">A React Task</p>
-          <p class="subtitle">by Boom.dev</p>
-        </div>
-      </section>
-      <div class="container is-fullhd">
-        <div class="notification">
-          Edit the <code>./src</code> folder to add components.
-        </div>
-      </div>
+   <div>
+    <Header />
+   
+   {/* <Products />    */}
+    
+   <div className="cards-holder">
+      <Search details={recipeData}/>
     </div>
+    
+   </div>
   );
 }
 
